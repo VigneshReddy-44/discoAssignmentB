@@ -1,3 +1,13 @@
+/*
+ * Team 50
+ *
+ * T Vignesh Reddy: 2021A7PS0234H
+ * Harshit Agarwal: 2021A7PS0247H
+ *
+ *
+ * */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -171,7 +181,7 @@ int main(int argc,char *argv[]) {
 
 
     if(nodes1!=nodes2 || edges1!=edges2 || (checkDegreeSequence(degreeCount1,degreeCount2,nodes1)==0)){
-        printf("Not Isomorphic. No bijection found");
+        printf("Not Isomorphic, No bijection found");
     }else{
 
         int* nodeSequence=(int*) malloc(nodes1*sizeof (int));
@@ -189,7 +199,7 @@ int main(int argc,char *argv[]) {
         for( i=0;i<count;i++){
             int* currentSequence=permutations[i];
             if(permutedMatrix(currentSequence,nodes1,adj_matrix1,adj_matrix2)==true){
-                printf("Isomorphic\n");
+                printf("Isomorphic.\n");
                 for(int i=0;i<nodes1;i++){
                     printf("%d %d\n",i+1,currentSequence[i]);
                 }
@@ -198,7 +208,7 @@ int main(int argc,char *argv[]) {
 
         }
         if(i==count){
-            printf("Not isomorphic. No bijection found");
+            printf("Not isomorphic, No bijection found");
         }
 
 
